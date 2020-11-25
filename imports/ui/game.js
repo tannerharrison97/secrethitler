@@ -357,7 +357,7 @@ Template.game.events({
     });
   },
   "click .pick-fascist": function() {
-    if (confirm("Are you sure you want to discard this policy?")) {
+    if (confirm("You're more liberal than Bernie!!! You sure you want to discard this fascist policy??")) {
       let playerId = Session.get("playerId");
       Meteor.call("discard", {
         playerId: playerId,
@@ -367,7 +367,7 @@ Template.game.events({
     
   },
   "click .pick-liberal": function() {
-    if (confirm("Are you sure you want to discard this policy?")) {
+    if (confirm("Are you Hitler or something??? Do you actually want to discard a liberal policy??")) {
       let playerId = Session.get("playerId");
       Meteor.call("discard", {
         playerId: playerId,
