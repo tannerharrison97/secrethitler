@@ -357,18 +357,23 @@ Template.game.events({
     });
   },
   "click .pick-fascist": function() {
-    let playerId = Session.get("playerId");
-    Meteor.call("discard", {
+    if (confirm("Are you sure you want to discard this policy?")) {
+      let playerId = Session.get("playerId");
+      Meteor.call("discard", {
         playerId: playerId,
         card: "fascist"
     });
+    }
+    
   },
   "click .pick-liberal": function() {
-    let playerId = Session.get("playerId");
-    Meteor.call("discard", {
+    if (confirm("Are you sure you want to discard this policy?")) {
+      let playerId = Session.get("playerId");
+      Meteor.call("discard", {
         playerId: playerId,
         card: "liberal"
     });
+    }
   },
   "click ul.ring > li": function(event) {
     let playerId = $(event.currentTarget).data("playerid");
